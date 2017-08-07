@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Info Wise App</title>
+        <script src = "js/google-signin-code.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDbWEVudTylVrB4vKAzY72Vn0uYd_njriY",
+            authDomain: "info-wise.firebaseapp.com",
+            databaseURL: "https://info-wise.firebaseio.com",
+            projectId: "info-wise",
+            storageBucket: "info-wise.appspot.com",
+            messagingSenderId: "441500702588"
+          }
+          firebase.initializeApp(config);
+        </script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href = "css/style.css" />
+        
+    </head>
+    <body style="background-image: url('https://s8.favim.com/orig/150824/acid-black-blue-colors-Favim.com-3173658.png'); background-repeat: no-repeat; background-size: cover; min-height: 100vh">
+        <header>
+        <nav class="blue lighten-4">
+            <div class="nav-wrapper">
+              <img id="logo-image" src="images/logo.png">
+              <a id = "logo" href="/" class="brand-logo">Smart Fam</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/academic">Academic</a></li>
+                <li><a href="/arts">Arts</a></li>
+                <li><a href="/stem">STEM</a></li>
+                <li><a href="/database">Database</a></li>
+                <li><a href="badges.html">Components</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+      <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/menu-background.png">
+                </div>
+                
+                <a href="#!user"><img  id = "google-small-pic" class="circle" src="images/blank-profile-picture.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><button 
+                        class="btn btn-primary blue lighten-4"
+                        id="google-signin" 
+                        onclick={signInWithGoogle()}
+                    >
+                        Sign In With Google
+                    </button></li>
+            <li><button 
+                        class="btn btn-primary blue lighten-4"
+                        id="signout" 
+                    gue    onclick={signOut()}
+                        style="display: none; visibility: hidden;"
+                    >
+                        Sign Out
+                    </button></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+            <div id="button">
+            
+            <li>
+            </div>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons ">menu</i></a>
+    
+        <script>
+            // Initialize collapse button
+            $(".button-collapse").sideNav();
+            // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+            //$('.collapsible').collapsible();
+        </script> 
+        <div id = "body">
+         <div class="container">
+            <h1>Prep for Prep - 5 stars</h1>
+            <p>Prep for Prep identifies New York City’s most promising students of color and prepares them for success at independent schools throughout the Northeast. Once placed, Prep supports the academic and personal growth of our students through college.</p>
+            <a href="#">This is a link</a>
+            <h3></h3>
+            <img  src="images/prep-for-prep.png"/>
+        </div>
+        </div>
+    </body>
+</html>

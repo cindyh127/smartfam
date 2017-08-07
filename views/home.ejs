@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://chatwee-api.com/v2/script/59869554bd616d143b60d902.js"></script>
+    <title>Info Wise App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDbWEVudTylVrB4vKAzY72Vn0uYd_njriY",
+            authDomain: "info-wise.firebaseapp.com",
+            databaseURL: "https://info-wise.firebaseio.com",
+            projectId: "info-wise",
+            storageBucket: "info-wise.appspot.com",
+            messagingSenderId: "441500702588"
+        }
+        firebase.initializeApp(config);
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>    
+</head>
+
+<body id="wholeThang" style = "background-color: #FFFFFF; padding-left: 250px">
+    <!--<body  style="max-width:1200px">-->
+    <!--<img  id = "google-small-pic" class="circle" src="images/blank-profile-picture.jpg">-->
+    <!--<img  id = "google-pic" class="circle" src="images/blank-profile-picture.jpg">-->
+
+        <!-- Sidebar/menu -->
+        <center>
+        <a href = "/academic" style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">school</i></a>
+        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <br>
+        <a style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <br>
+        <a style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <br>
+        </center>
+        <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width: 250px; margin-left: -250px" id="mySidebar">
+            <div class="w3-container w3-display-container w3-padding-16">
+                <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+                <img class="w3-wide" id = "side-logo-image" class="circle" src="images/blank-profile-picture.jpg">
+                <center>
+                     <h6  class="w3-wide" id='google-email'></h6>
+                     <h6  class="w3-wide" id='google-displayName'></h6>
+                 </center>
+              <h3 style = " margin-left: 20px" class="w3-wide"><b>Smart Fam</b></h3>
+            </div>
+            <div class="w3-padding-30 w3-large w3-text-grey" style="font-weight:bold">
+                <a href="/home" class="w3-bar-item w3-button">Home</a>
+                <a href="/about" class="w3-bar-item w3-button">About Us</a>
+                <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
+                <p style="margin-left: 60px">Featured</p>
+                <a href="/academic" class="w3-bar-item w3-button">Academic</a>
+                <a href="/arts" class="w3-bar-item w3-button">Arts</a>
+                <a href="/stem" class="w3-bar-item w3-button">Stem</a>
+                <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Database <i class="fa fa-caret-down"></i>
+    </a>
+                <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                    <a href="/bronx" class="w3-bar-item w3-button w3-light-grey"></i>Bronx</a>
+                    <a href="/brooklyn" class="w3-bar-item w3-button w3-light-grey">Brooklyn</a>
+                    <a href="/queens" class="w3-bar-item w3-button w3-light-grey">Queens</a>
+                    <a href="/manhattan" class="w3-bar-item w3-button w3-light-grey">Manhattan</a>
+                    <a href="/staten-island" class="w3-bar-item w3-button w3-light-grey">Staten Island</a>
+                </div>
+                <a href="/blog" class="w3-bar-item w3-button">Blog</a>
+            </div>
+        </nav>
+        <!-- Top menu on small screens -->
+        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+          <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        </header>
+        
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+        <div  id="footer">
+            <div id="google_translate_element"></div><script type="text/javascript">
+            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div> 
+         <script src="js/home.js"></script>
+</body>
+
+</html>
