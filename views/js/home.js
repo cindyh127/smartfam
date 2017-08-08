@@ -15,9 +15,6 @@ function checkIfLoggedIn() {
             //     .setAttribute('style', 'display: none; visibility: hidden')
             // document.getElementById('signout')
             //     .setAttribute('style', 'display: inline-block; visibility: visible')
-            var googleEmail = user.email
-            document.getElementById('google-email')
-                .innerHTML = 'Email: '+ googleEmail
             var googleDisplayName = user.displayName
             document.getElementById('google-displayName')
                 .innerHTML = 'Name: '+googleDisplayName
@@ -41,8 +38,6 @@ function checkIfLoggedIn() {
 
 function signOut() {
     firebase.auth().signOut()
-    document.getElementById('google-email')
-            .innerHTML = ''
     document.getElementById('google-displayName')
             .innerHTML = ''
     document.getElementById('side-logo-image')
@@ -65,8 +60,8 @@ function signInWithGoogle() {
         .catch(function(error) {
             console.log(error)
         })
-}
-function googleTranslateElementInit() {
+    }
+     function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
         }
         
@@ -104,9 +99,13 @@ function googleTranslateElementInit() {
                 var h = window.innerHeight;  
                 
                 if (w < 800) {
-                    document.body.setAttribute('style', "background-color:  #FFFFFF;padding-left: 0px")
+                    document.body.setAttribute('style', "background-color: #8ec5ed;padding-left: 0px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left:0px; padding-top:90px')
+                   
+                   
                 } else if (w > 800) {
-                    document.body.setAttribute('style', "background-color:  #FFFFFF; padding-left: 250px")
+                    document.body.setAttribute('style', "background-color: #8ec5ed; padding-left: 250px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left: -250px')
                 }
             }
             

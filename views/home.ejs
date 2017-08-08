@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://chatwee-api.com/v2/script/59869554bd616d143b60d902.js"></script>
     <title>Info Wise App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
@@ -50,37 +49,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>    
 </head>
 
-<body id="wholeThang" style = "background-color: #FFFFFF; padding-left: 250px">
+<body id="wholeThang" style = "background-color: #8ec5ed; padding-left: 250px">
     <!--<body  style="max-width:1200px">-->
     <!--<img  id = "google-small-pic" class="circle" src="images/blank-profile-picture.jpg">-->
     <!--<img  id = "google-pic" class="circle" src="images/blank-profile-picture.jpg">-->
 
         <!-- Sidebar/menu -->
         <center>
-        <a href = "/academic" style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">school</i></a>
-        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <br>
-        <a style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <br>
-        <a style = "margin-right: 100px; margin-top: 100px" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <a style = "margin-top: 100px"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <br>
+                    <br>
+                <div class="row">
+                <a href = "/academic" style = "width:100px;height:100px;margin-right: 35px; margin-top: 170px" class="btn-floating btn-large waves-effect waves-light white"><i class="material-icons icon-blue" style=" margin-top:20px;font-size: 50px">school</i></a>
+                <a href = "/arts" style = "width:100px;height:100px;margin-top: 170px"class="btn-floating waves-effect waves-light white"><i class="material-icons icon-blue" style=" margin-top:27px;font-size: 50px">palette</i></a>
+                </div>
+                <!--<br>-->
+                <!--<br>-->
+                <!--<a style = "color: white;margin-left: -20px; margin-right: 90px">Academic</a>-->
+                <!--<a style = "color: white">Arts</a>-->
+                <div class="row">
+                <a href = "/stem" style = "width:100px;height:100px;margin-right: 45px; margin-top: 80px" class="btn-floating  waves-effect waves-light white"><i class="material-icons icon-blue" style=" margin-top:30px;font-size: 50px">settings</i></a>
+                <a href = "/" style = "width:100px;height:100px;margin-top: 80px"class="btn-floating waves-effect waves-light white"><i class="material-icons icon-blue" style=" margin-top:27px;font-size: 50px">info_outline</i></a>
+                </div>
+                <!--<br>-->
+                <!--<br>-->
+                <!--<a style = "color: white; margin-left: 10px; margin-right:90px">Stem</a>-->
+                <!--<a style = "color: white">Database</a>-->
         </center>
         <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width: 250px; margin-left: -250px" id="mySidebar">
             <div class="w3-container w3-display-container w3-padding-16">
                 <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
                 <img class="w3-wide" id = "side-logo-image" class="circle" src="images/blank-profile-picture.jpg">
+                <!--<img class="w3-wide" id="side-logo-image" src="images/logo.png">-->
                 <center>
-                     <h6  class="w3-wide" id='google-email'></h6>
-                     <h6  class="w3-wide" id='google-displayName'></h6>
-                 </center>
-              <h3 style = " margin-left: 20px" class="w3-wide"><b>Smart Fam</b></h3>
+                    <h6  class="w3-wide" id='google-displayName'></h6>
+                </center>
+              <h3 style = " margin-left: 20px" class="w3-wide"><b>smartfam</b></h3>
             </div>
             <div class="w3-padding-30 w3-large w3-text-grey" style="font-weight:bold">
-                <a href="/home" class="w3-bar-item w3-button">Home</a>
-                <a href="/about" class="w3-bar-item w3-button">About Us</a>
-                <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
+               <a href="/home" class="w3-bar-item w3-button">Home</a>
+               <a href="/about" class="w3-bar-item w3-button">About Us</a>
+               <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
                 <p style="margin-left: 60px">Featured</p>
                 <a href="/academic" class="w3-bar-item w3-button">Academic</a>
                 <a href="/arts" class="w3-bar-item w3-button">Arts</a>
@@ -97,19 +104,21 @@
                 </div>
                 <a href="/blog" class="w3-bar-item w3-button">Blog</a>
             </div>
+            
         </nav>
         <!-- Top menu on small screens -->
-        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-          <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+        <header class="white w3-bar w3-top w3-hide-large w3-white w3-xlarge">
+          <div class=" w3-bar-item w3-padding-24 w3-wide"><b>smart</b>fam</div>
           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         </header>
         
         <!-- Overlay effect when opening sidebar on small screens -->
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-        <div  id="footer">
-            <div id="google_translate_element"></div><script type="text/javascript">
-            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        </div> 
+        
+        <!--<div  id="footer">-->
+        <!--    <div id="google_translate_element"></div><script type="text/javascript">-->
+        <!--    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+        <!--</div> -->
          <script src="js/home.js"></script>
 </body>
 

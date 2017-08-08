@@ -211,6 +211,9 @@ function drawCard() {
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">${arr[i].name}<i class="material-icons right">close</i></span>
                         <p>${arr[i].info}</p>
+                        <center>
+                            <button class = "btn #94C47D" type="button" id = "${arr[i].id}-submit" onclick={}>Submit</button>
+                        </center>
                     </div>
             </div>`
             // col s12 m6

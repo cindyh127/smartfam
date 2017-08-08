@@ -4,20 +4,20 @@ function checkIfLoggedIn() {
             //logged in code
             console.log("user signed in")
             console.log(user)
-            document.getElementById('text').innerHTML = 'You are signed in click Next to continue'
-            document.getElementById('google-signin')
-                .setAttribute('style', 'display: none; visibility: hidden')
+            // document.getElementById('text').innerHTML = 'You are signed in click Next to continue'
+            document.getElementById('orig-google-signin')
+                .setAttribute('style', 'display: none; visibility: hidden;color: #000000')
             document.getElementById('next')
-                .setAttribute('style', 'display: inline-block; visibility: visible')
+                .setAttribute('style', 'display: inline-block; visibility: visible; color: #000000')
 
         }
         else {
             //signed out code 
             //console.log("user not signed in")
-            document.getElementById('google-signin')
-                .setAttribute('style', 'display: inline-block; visibility: visible')
+            document.getElementById('orig-google-signin')
+                .setAttribute('style', 'display: inline-block; visibility: visible;color: #000000')
              document.getElementById('next')
-                .setAttribute('style', 'display: none; visibility: hidden')
+                .setAttribute('style', 'display: none; visibility: hidden; color: #000000')
 
         }
     })

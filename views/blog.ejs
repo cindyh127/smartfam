@@ -48,34 +48,53 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>    
+    <script src="js/google-signin-code.js"></script>    
 </head>
+
 <body id="wholeThang" style = "background-color: #8ec5ed; padding-left: 250px">
+<!--<body style = "background-image: url(images/library.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh" id="wholeThang" style = "padding-left: 250px">-->
     <!--<body  style="max-width:1200px">-->
-    <!--<img  id = "google-small-pic" class="circle" src="images/blank-profile-picture.jpg">-->
-    <!--<img  id = "google-pic" class="circle" src="images/blank-profile-picture.jpg">-->
-    
         <!-- Sidebar/menu -->
+        <!--<center>-->
+        <!--<h1 style = "color: #FFFFFF;margin-top: 100px"><b>Tips and Tricks from Ivy League Colleges</h1>-->
+        <!--<h5 style = "color: #FFFFFF;margin-top: 20px">Yale's Dean of Admissions:</h5>-->
+        <!--</center>-->
+        <!--<b><p style = "color: #FFFFFF; margin-top: 20px; margin-right:70px;margin-left:70px">-->
+        <!--    Then have the harvard page link to a page which contains this text: As you know, extracurricular activities are an important part of your college application. -->
+        <!--    The things that you choose to do outside of the classroom help college admission officers understand your personality in a way that your grades and test scores can’t show.-->
+        <!--    With so many activities to choose from, how do you know which ones are going to make the biggest impact on your application? -->
+        <!--    Do colleges prefer students with traditional activities like sports and student council, or are you better off if you have something unconventional on your activity list? -->
+        <!--    If you're unsure about how to strategize a list of activities that will make an impact on your application, read on to see the three best extracurricular activities that will really get you noticed.-->
+        <!--    On the bottom, you will find a list of the most popular extracurriculars out students go to.-->
+        <!--</p></b>-->
         <center>
-        <h1 style = "color: #FFFFFF;margin-top: 100px"><b>Tips and Tricks from Ivy League Colleges</h1>
-        <h5 style = "color: #FFFFFF;margin-top: 20px">Yale's Dean of Admissions:</h5>
+        <br>
+        <a href = "/tips"><img style = "width:100px; height:100px; margin-right: 35px; margin-top: 120px" src = "images/harvard.png"></i></a>
+        <a href = "/home"><img style = "width:100px; height:100px; margin-top: 120px" src = "images/yale.png"></i></a>
+        <br>
+        <a href = "/home"><img style = "width:100px; height:100px; margin-right: 35px; margin-top: 80px" src = "images/princeton.png"></i></a>
+        <a href = "/home"><img style = "width:100px; height:100px;  margin-top: 80px" src = "images/penn.png"></i></a>
+        <br>
+        <a href = "/home"><img style = "border-radius: 60%;margin-left: 30px;width:100px; height:100px; margin-right: 35px; margin-top: 80px" src = "images/amherst.jpg"></i></a>
+        <a href = "/home"><img style = "width:100px; height:100px; margin-right: 35px; margin-top: 80px" src = "images/dartmouth.png"></i></a>
         </center>
-        <b><p style = "color: #FFFFFF; margin-top: 20px; margin-right:70px;margin-left:70px">Lorem ipsum dolor sit amet, eam agam mentitum torquatos ut. Dicat nullam dicunt ei has, ei his mutat tritani eligendi, ei inermis vituperatoribus pro. Debitis invidunt pri ne, vim duis simul virtute ad. An vim minim causae scaevola. An nec doctus nostrud eligendi, mutat soluta regione et mea, et molestie atomorum has. Ea unum vidit theophrastus vim.</h5>
-        </p></b>
+        
+        
+        
         <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width: 250px; margin-left: -250px" id="mySidebar">
             <div class="w3-container w3-display-container w3-padding-16">
                 <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
                 <img class="w3-wide" id = "side-logo-image" class="circle" src="images/blank-profile-picture.jpg">
                 <!--<img class="w3-wide" id="side-logo-image" src="images/logo.png">-->
                 <center>
-                    <h6  class="w3-wide" id='google-email'></h6>
                     <h6  class="w3-wide" id='google-displayName'></h6>
                 </center>
-              <h3 style = " margin-left: 20px" class="w3-wide"><b>Smart Fam</b></h3>
+              <h3 style = " margin-left: 20px" class="w3-wide"><b>smartfam</b></h3>
             </div>
             <div class="w3-padding-30 w3-large w3-text-grey" style="font-weight:bold">
-                <a href="/home" class="w3-bar-item w3-button">Home</a>
-                <a href="/about" class="w3-bar-item w3-button">About Us</a>
-                <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
+               <a href="/home" class="w3-bar-item w3-button">Home</a>
+               <a href="/about" class="w3-bar-item w3-button">About Us</a>
+               <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
                 <p style="margin-left: 60px">Featured</p>
                 <a href="/academic" class="w3-bar-item w3-button">Academic</a>
                 <a href="/arts" class="w3-bar-item w3-button">Arts</a>
@@ -92,74 +111,81 @@
                 </div>
                 <a href="/blog" class="w3-bar-item w3-button">Blog</a>
             </div>
+            
         </nav>
+
         <!-- Top menu on small screens -->
-        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-          <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
-          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <header class="white w3-bar w3-top w3-hide-large w3-white w3-xlarge">
+           <a href = "/home" class="w3-bar-item w3-padding-24 w3-wide">smartfam</a>
+           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         </header>
-        
+
         <!-- Overlay effect when opening sidebar on small screens -->
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-    
         <div  id="footer">
             <div id="google_translate_element"></div><script type="text/javascript">
             </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        </div>      
-        <!-- Top menu on small screens -->
-        <!--<header style="z-index: 3" class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">-->
-        <!--    <div class="w3-bar-item w3-padding-24 w3-wide">Smart Fam</div>-->
-        <!--    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>-->
-        <!--</header>-->
+        </div> 
+      <!--style = "background-image: url('https://s8.favim.com/orig/150824/acid-black-blue-colors-Favim.com-3173658.png'); background-repeat: no-repeat; background-size: cover; min-height: 100vh"-->
+     <div id="body">
+            <div class="container">
+                <!--<div class="row">-->
+                <div class="row" id="card"></div>
+            </div>
+            <!--</div>-->
+        </div>
+         <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en',layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+            // Accordion 
+            function myAccFunc() {
+                var x = document.getElementById("demoAcc");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                }
+                else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
 
-        <!-- Overlay effect when opening sidebar on small screens -->
-        <!--<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>-->
-
-        <!--<script>-->
-        <!--function googleTranslateElementInit() {-->
-        <!--  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');-->
-        <!--}-->
-            <!--// Accordion -->
-        <!--    function myAccFunc() {-->
-        <!--        var x = document.getElementById("demoAcc");-->
-        <!--        if (x.className.indexOf("w3-show") == -1) {-->
-        <!--            x.className += " w3-show";-->
-        <!--        }-->
-        <!--        else {-->
-        <!--            x.className = x.className.replace(" w3-show", "");-->
-        <!--        }-->
-        <!--    }-->
-
-            <!--// Click on the "Jeans" link on page load to open the accordion for demo purposes-->
-        <!--    document.getElementById("myBtn").click();-->
+            // Click on the "Jeans" link on page load to open the accordion for demo purposes
+            document.getElementById("myBtn").click();
 
 
-            <!--// Script to open and close sidebar-->
-        <!--    function w3_open() {-->
-        <!--        document.getElementById("mySidebar").style.display = "block";-->
-        <!--        document.getElementById("myOverlay").style.display = "block";-->
-        <!--    }-->
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
 
-        <!--    function w3_close() {-->
-        <!--        document.getElementById("mySidebar").style.display = "none";-->
-        <!--        document.getElementById("myOverlay").style.display = "none";-->
-        <!--    }-->
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
             
-        <!--    function adjustPaddingOfBody(){-->
-        <!--        var w = window.innerWidth;-->
-        <!--        var h = window.innerHeight;  -->
+            function adjustPaddingOfBody(){
+                var w = window.innerWidth;
+                var h = window.innerHeight;  
                 
-        <!--        if (w < 800) {-->
-        <!--            document.body.setAttribute('style', "background-image: url(images/clouds.gif); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 0px")-->
-        <!--        } else if (w > 800) {-->
-        <!--            document.body.setAttribute('style', "background-image: url(images/clouds.gif); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 250px")-->
-        <!--        }-->
-        <!--    }-->
+                if (w < 800) {
+                    document.body.setAttribute('style', "background-color: #8ec5ed;padding-left: 0px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left:0px; padding-top:90px')
+                   
+                   
+                } else if (w > 800) {
+                    document.body.setAttribute('style', "background-color: #8ec5ed; padding-left: 250px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left: -250px')
+                }
+            }
             
-        <!--    window.onresize = adjustPaddingOfBody-->
-        <!--    adjustPaddingOfBody()-->
-        <!--</script>-->
-         <script src="js/about.js"></script>
-</body>
+            window.onresize = adjustPaddingOfBody
+            adjustPaddingOfBody()
+        </script>
 
+    <!--</body>-->
+    <script src="js/blog.js"></script>
+    <!--<script src="js/google-signin-code.js"></script>    -->
+</body>
 </html>
+

@@ -115,7 +115,7 @@ function getFavorites() {
                                     return program.name === key
                                 })
                                 finalHTML+=
-                                `<div style="margin-right: 25px" class="card col l5 s12 m5">
+                                `<div style="margin-right: 0px" class="card col l5 s12 m5">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="images/${program.image}">
                     </div>

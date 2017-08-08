@@ -50,33 +50,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>    
 </head>
 
-<body style = "background-image: url(images/skyline.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh" id="wholeThang" style = "padding-left: 250px">
+<body style = "background-image: url(images/skyline.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh; padding-left: 250px" id="wholeThang">
+    
+    <!--style = "padding-left: 250px"-->
     <!--<body  style="max-width:1200px">-->
     <!--<img  id = "google-small-pic" class="circle" src="images/blank-profile-picture.jpg">-->
     <!--<img  id = "google-pic" class="circle" src="images/blank-profile-picture.jpg">-->
     
         <!-- Sidebar/menu -->
         <center>
-        <h1 style = "color: #FFFFFF;margin-top: 100px"><b>smart</b>fam</h1>
-        <h5 style = "color: #FFFFFF;margin-top: 20px">Our mission:</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4 style = "color: #FFFFFF;margin-top: 20px">Our mission:</h4>
+        <b><p style = "color: #FFFFFF; margin-top: 20px; margin-right:40px;margin-left:40px">SmartFam is an app that makes finding extracurricular programs easier and faster. We give our users access to an organized database of outside-of-school activities with opinions given by parents and students.</h5>
+        </p></b>       
         </center>
-        <b><p style = "color: #FFFFFF; margin-top: 20px; margin-right:70px;margin-left:70px">SmartFam is an app that makes finding extracurricular programs easier and faster. We give our users access to an organized database of outside-of-school activities with opinions given by parents.</h5>
-        </p></b>
+         
+        
+        
         <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width: 250px; margin-left: -250px" id="mySidebar">
             <div class="w3-container w3-display-container w3-padding-16">
                 <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
                 <img class="w3-wide" id = "side-logo-image" class="circle" src="images/blank-profile-picture.jpg">
                 <!--<img class="w3-wide" id="side-logo-image" src="images/logo.png">-->
-                <center>
-                    <h6  class="w3-wide" id='google-email'></h6>
                     <h6  class="w3-wide" id='google-displayName'></h6>
                 </center>
-              <h3 style = " margin-left: 20px" class="w3-wide"><b>Smart Fam</b></h3>
+              <h3 style = " margin-left: 20px" class="w3-wide"><b>smartfam</b></h3>
             </div>
             <div class="w3-padding-30 w3-large w3-text-grey" style="font-weight:bold">
-                <a href="/home" class="w3-bar-item w3-button">Home</a>
-                <a href="/about" class="w3-bar-item w3-button">About Us</a>
-                <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
+               <a href="/home" class="w3-bar-item w3-button">Home</a>
+               <a href="/about" class="w3-bar-item w3-button">About Us</a>
+               <a href="/favorite" class="w3-bar-item w3-button">Your Favorites</a>
                 <p style="margin-left: 60px">Featured</p>
                 <a href="/academic" class="w3-bar-item w3-button">Academic</a>
                 <a href="/arts" class="w3-bar-item w3-button">Arts</a>
@@ -93,73 +101,24 @@
                 </div>
                 <a href="/blog" class="w3-bar-item w3-button">Blog</a>
             </div>
+            
         </nav>
+
         <!-- Top menu on small screens -->
-        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-          <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
-          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <header class="white w3-bar w3-top w3-hide-large w3-white w3-xlarge">
+           <a href = "/home" class="w3-bar-item w3-padding-24 w3-wide">smartfam</a>
+           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         </header>
-        
+
         <!-- Overlay effect when opening sidebar on small screens -->
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-    
         <div  id="footer">
             <div id="google_translate_element"></div><script type="text/javascript">
             </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        </div>      
-        <!-- Top menu on small screens -->
-        <!--<header style="z-index: 3" class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">-->
-        <!--    <div class="w3-bar-item w3-padding-24 w3-wide">Smart Fam</div>-->
-        <!--    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>-->
-        <!--</header>-->
-
-        <!-- Overlay effect when opening sidebar on small screens -->
-        <!--<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>-->
-
-        <!--<script>-->
-        <!--function googleTranslateElementInit() {-->
-        <!--  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');-->
-        <!--}-->
-            <!--// Accordion -->
-        <!--    function myAccFunc() {-->
-        <!--        var x = document.getElementById("demoAcc");-->
-        <!--        if (x.className.indexOf("w3-show") == -1) {-->
-        <!--            x.className += " w3-show";-->
-        <!--        }-->
-        <!--        else {-->
-        <!--            x.className = x.className.replace(" w3-show", "");-->
-        <!--        }-->
-        <!--    }-->
-
-            <!--// Click on the "Jeans" link on page load to open the accordion for demo purposes-->
-        <!--    document.getElementById("myBtn").click();-->
-
-
-            <!--// Script to open and close sidebar-->
-        <!--    function w3_open() {-->
-        <!--        document.getElementById("mySidebar").style.display = "block";-->
-        <!--        document.getElementById("myOverlay").style.display = "block";-->
-        <!--    }-->
-
-        <!--    function w3_close() {-->
-        <!--        document.getElementById("mySidebar").style.display = "none";-->
-        <!--        document.getElementById("myOverlay").style.display = "none";-->
-        <!--    }-->
-            
-        <!--    function adjustPaddingOfBody(){-->
-        <!--        var w = window.innerWidth;-->
-        <!--        var h = window.innerHeight;  -->
-                
-        <!--        if (w < 800) {-->
-        <!--            document.body.setAttribute('style', "background-image: url(images/clouds.gif); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 0px")-->
-        <!--        } else if (w > 800) {-->
-        <!--            document.body.setAttribute('style', "background-image: url(images/clouds.gif); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 250px")-->
-        <!--        }-->
-        <!--    }-->
-            
-        <!--    window.onresize = adjustPaddingOfBody-->
-        <!--    adjustPaddingOfBody()-->
-        <!--</script>-->
+        </div> 
+        
+           
+        
          <script src="js/about.js"></script>
 </body>
 

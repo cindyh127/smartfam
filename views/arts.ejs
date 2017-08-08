@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <script src="https://chatwee-api.com/v2/script/59869554bd616d143b60d902.js"></script>
     <title>Info Wise App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
@@ -52,17 +52,18 @@
 </head>
 
 <body id="wholeThang" style = "background-color: #8ec5ed; padding-left: 250px">
+<!--<body style = "background-image: url(images/library.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh" id="wholeThang" style = "padding-left: 250px">-->
     <!--<body  style="max-width:1200px">-->
         <!-- Sidebar/menu -->
         <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width: 250px; margin-left: -250px" id="mySidebar">
             <div class="w3-container w3-display-container w3-padding-16">
                 <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
                 <img class="w3-wide" id = "side-logo-image" class="circle" src="images/blank-profile-picture.jpg">
-                 <center>
-                    <h6  class="w3-wide" id='google-email'></h6>
+                <!--<img class="w3-wide" id="side-logo-image" src="images/logo.png">-->
+                <center>
                     <h6  class="w3-wide" id='google-displayName'></h6>
                 </center>
-              <h3 style = " margin-left: 20px" class="w3-wide"><b>Smart Fam</b></h3>
+              <h3 style = " margin-left: 20px" class="w3-wide"><b>smartfam</b></h3>
             </div>
             <div class="w3-padding-30 w3-large w3-text-grey" style="font-weight:bold">
                <a href="/home" class="w3-bar-item w3-button">Home</a>
@@ -73,7 +74,7 @@
                 <a href="/arts" class="w3-bar-item w3-button">Arts</a>
                 <a href="/stem" class="w3-bar-item w3-button">Stem</a>
                 <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Activities <i class="fa fa-caret-down"></i>
+      Database <i class="fa fa-caret-down"></i>
     </a>
                 <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
                     <a href="/bronx" class="w3-bar-item w3-button w3-light-grey"></i>Bronx</a>
@@ -84,24 +85,22 @@
                 </div>
                 <a href="/blog" class="w3-bar-item w3-button">Blog</a>
             </div>
+            
         </nav>
 
         <!-- Top menu on small screens -->
-        <header style="z-index: 3" class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-            <div class="w3-bar-item w3-padding-24 w3-wide">Smart Fam</div>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <header class="white w3-bar w3-top w3-hide-large w3-white w3-xlarge">
+           <a href = "/home" class="w3-bar-item w3-padding-24 w3-wide">smartfam</a>
+           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         </header>
 
         <!-- Overlay effect when opening sidebar on small screens -->
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-        
         <div  id="footer">
             <div id="google_translate_element"></div><script type="text/javascript">
             </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div> 
-    
-    <!--style = "background-image: url('https://s8.favim.com/orig/150824/acid-black-blue-colors-Favim.com-3173658.png'); background-repeat: no-repeat; background-size: cover; min-height: 100vh"-->
+      <!--style = "background-image: url('https://s8.favim.com/orig/150824/acid-black-blue-colors-Favim.com-3173658.png'); background-repeat: no-repeat; background-size: cover; min-height: 100vh"-->
      <div id="body">
             <div class="container">
                 <!--<div class="row">-->
@@ -109,10 +108,7 @@
             </div>
             <!--</div>-->
         </div>
-   
-
-        
-        <script>
+         <script>
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({pageLanguage: 'en',layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
             }
@@ -147,9 +143,13 @@
                 var h = window.innerHeight;  
                 
                 if (w < 800) {
-                    document.body.setAttribute('style', "background-color: #8ec5ed; padding-left: 0px")
+                    document.body.setAttribute('style', "background-color: #8ec5ed;padding-left: 0px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left:0px; padding-top:90px')
+                   
+                   
                 } else if (w > 800) {
                     document.body.setAttribute('style', "background-color: #8ec5ed; padding-left: 250px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left: -250px')
                 }
             }
             
@@ -159,6 +159,6 @@
 
     <!--</body>-->
     <script src="js/arts.js"></script>
+    <!--<script src="js/google-signin-code.js"></script>    -->
 </body>
-
 </html>

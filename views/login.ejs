@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-   <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <title>Info Wise App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -16,73 +18,55 @@
         }
         firebase.initializeApp(config);
     </script>
-  <style>
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
 
-    main {
-      flex: 1 0 auto;
-    }
-
-    body {
-      background: #fff;
-    }
-
-    .input-field input[type=date]:focus + label,
-    .input-field input[type=text]:focus + label,
-    .input-field input[type=email]:focus + label,
-    .input-field input[type=password]:focus + label {
-      color: #e91e63;
-    }
-
-    .input-field input[type=date]:focus,
-    .input-field input[type=text]:focus,
-    .input-field input[type=email]:focus,
-    .input-field input[type=password]:focus {
-      border-bottom: 2px solid #e91e63;
-      box-shadow: none;
-    }
-  </style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>    
 </head>
 
-<body>
-    
-  <div class="section"></div>
-  <main>
-    <center>
-      <!--<img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />-->
-      <!--<div class="section"></div>-->
-      <img class="responsive-img" id="side-logo-image" src="images/logo.png">
-      <h5>Smart Fam</h5>
-      <div class="section"></div>
-      <h5 id= "text" class="indigo-text">Please, login into your google account</h5>
-      <div class="section"></div>
-
-      <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="margin-right: 50px;width: 1000px;display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-
-            <br />
-            <center>
-              <div class='row'>
-                 <a  id = "next" style="display: none; visibility: hidden" href ="/home" class='btn col s12 btn btn-large waves-effect indigo'>Next</a>
-                <button id="google-signin" onclick={signInWithGoogle()} class='btn col s12 btn btn-large waves-effect indigo'>Sign in with Google</button>
-                <img src="images/facebook.png">
-              </div>
-            </center>
-        </div>
-      </div>
-      <!--<a href="#!">Create account</a>-->
-    </center>
-
-    <div class="section"></div>
-    <div class="section"></div>
-  </main>
-  <script src="js/login.js"></script>    
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<body style = "background-color: #8ec5ed">
+    <!-- Sidebar/menu -->
+        <center>
+        <br>
+        <img style = "margin-top: 80px;height:100px; width:100px" src="images/logo.png">
+        <h1 style = "color: #FFFFFF;margin-top: 30px"><b>smart</b>fam</h1>
+        <br>
+        <br>
+        <br>
+        <a  id = "next" style="color: #000000;display: none; visibility: hidden" href ="/home" class='btn-large white'>Continue to App</a>
+        <button  style = "color: #000000"id="orig-google-signin" onclick={signInWithGoogle()} class='btn-large white'>Sign in with Google</button>
+        <br>
+        <br>
+        <br>
+        <a><img style = "margin-top: 0px" src="images/facebook.png"></a>   
+        
+        <script src="js/login.js"></script>
 </body>
 
 </html>
+

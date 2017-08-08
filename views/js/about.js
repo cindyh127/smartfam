@@ -15,9 +15,6 @@ function checkIfLoggedIn() {
             //     .setAttribute('style', 'display: none; visibility: hidden')
             // document.getElementById('signout')
             //     .setAttribute('style', 'display: inline-block; visibility: visible')
-            var googleEmail = user.email
-            document.getElementById('google-email')
-                .innerHTML = 'Email: '+ googleEmail
             var googleDisplayName = user.displayName
             document.getElementById('google-displayName')
                 .innerHTML = 'Name: '+googleDisplayName
@@ -41,8 +38,6 @@ function checkIfLoggedIn() {
 
 function signOut() {
     firebase.auth().signOut()
-    document.getElementById('google-email')
-            .innerHTML = ''
     document.getElementById('google-displayName')
             .innerHTML = ''
     document.getElementById('side-logo-image')
@@ -105,8 +100,12 @@ function googleTranslateElementInit() {
                 
                 if (w < 800) {
                     document.body.setAttribute('style', "background-image: url(images/skyline.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 0px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left:0px; padding-top:90px')
+                   
+                   
                 } else if (w > 800) {
-                    document.body.setAttribute('style', "background-image: url(images/skyline.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh;padding-left: 250px")
+                    document.body.setAttribute('style', "background-image: url(images/skyline.jpg); background-repeat: no-repeat; background-size: cover; min-height: 100vh; padding-left: 250px")
+                    document.getElementById('mySidebar').setAttribute('style', 'z-index:3; width: 250px; margin-left: -250px')
                 }
             }
             

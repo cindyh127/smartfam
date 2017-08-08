@@ -88,6 +88,10 @@ app.get('/blog', function(request, response){
       response.render('blog.ejs')
    
 })
+app.get('/tips', function(request, response){
+      response.render('tips.ejs')
+   
+})
 app.get('/favorite', function(request, response){
     var database = firebaseAdmin.database()
     var favoritesRef = database.ref('/favorites')
