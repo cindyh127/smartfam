@@ -16,9 +16,6 @@ function checkIfLoggedIn() {
             //     .setAttribute('style', 'display: none; visibility: hidden')
             // document.getElementById('signout')
             //     .setAttribute('style', 'display: inline-block; visibility: visible')
-            var googleEmail = user.email
-            document.getElementById('google-email')
-                .innerHTML = 'Email: '+ googleEmail
             var googleDisplayName = user.displayName
             document.getElementById('google-displayName')
                 .innerHTML = 'Name: '+googleDisplayName
@@ -42,8 +39,6 @@ function checkIfLoggedIn() {
 
 function signOut() {
     firebase.auth().signOut()
-    document.getElementById('google-email')
-            .innerHTML = ''
     document.getElementById('google-displayName')
             .innerHTML = ''
     document.getElementById('side-logo-image')

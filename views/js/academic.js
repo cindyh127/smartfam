@@ -11,9 +11,6 @@ function checkIfLoggedIn() {
             //     .setAttribute('style', 'display: none; visibility: hidden')
             // document.getElementById('signout')
             //     .setAttribute('style', 'display: inline-block; visibility: visible')
-            var googleEmail = user.email
-            document.getElementById('google-email')
-                .innerHTML = 'Email: '+ googleEmail
             var googleDisplayName = user.displayName
             document.getElementById('google-displayName')
                 .innerHTML = 'Name: '+googleDisplayName
@@ -37,8 +34,7 @@ function checkIfLoggedIn() {
 
 function signOut() {
     firebase.auth().signOut()
-    document.getElementById('google-email')
-            .innerHTML = ''
+
     document.getElementById('google-displayName')
             .innerHTML = ''
     document.getElementById('side-logo-image')
@@ -183,16 +179,19 @@ function drawCard() {
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="images/${arr[i].image}">
                     </div>
+                    <center>
                     <div class="card-content">
                         <span class=" card-title activator grey-text text-darken-4">${arr[i].name}<i class="material-icons right">more_vert</i></span>
-                        <p><a id = "link" href="${arr[i].link}">Link to their website</a></p>
-                        <!--<p><a href="/example-page">link to page on program</a></p>-->
+                        <center>
+                        <p><a style = "margin-left: 40px" id = "link" href="${arr[i].link}">Link to their website</a></p>
+                        </center>
+                        <!--<p><a style = "margin-left: 20px" href="/example-page">link to page on program</a></p>-->
                         <td>
                             <input type="checkbox" name="${arr[i].id}-heart" id="${arr[i].id}-heart" onclick="favorite('${arr[i].id}-heart', '${arr[i].name}')" class="css-checkbox" />
-                            <label for="${arr[i].id}-heart" class="css-label">Click to save to your favorites page</label>
+                            <label for="${arr[i].id}-heart" class="css-label">Click to favorite</label>
                         </td>
 
-                        <div class="stars">
+                        <div style = "margin-left: -10px" class="stars">
                             <input value="5" class="star star-5" id="${arr[i].id}-star-5" type="radio" name="star" /> 
                             <label class="star star-5" for="${arr[i].id}-star-5"></label> 
                             <input value="4"class="star star-4" id="${arr[i].id}-star-4" type="radio" name="star" /> 
@@ -208,11 +207,12 @@ function drawCard() {
                             </center>
                         </div>
                     </div>
+                    </center>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">${arr[i].name}<i class="material-icons right">close</i></span>
                         <p>${arr[i].info}</p>
                         <center>
-                            <button class = "btn #94C47D" type="button" id = "${arr[i].id}-submit" onclick={}>Submit</button>
+                            <a href = /application ><button class = "btn #94C47D" type="button" id = "${arr[i].id}-submit">Apply</button></a>
                         </center>
                     </div>
             </div>`
